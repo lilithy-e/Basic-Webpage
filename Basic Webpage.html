@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Tea</title>
+    <style>
+        .whole-page {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 60px;
+            background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+            }
+        h1 {
+            text-align: center;
+            color: #2E2F2A;
+        }
+        h2 {
+            text-align: center;
+            color: #545875;
+            font-size: 20px;
+            border: 1px solid #2E2F2A;
+            display: block;
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 15px 0 15px 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 10px;
+            padding: 15px 0 15px 0;
+        }
+        p {
+            display: block;
+            margin: 0 auto;
+            line-height: 1.5;
+            color: #545875;
+            padding: 10px 0 10px 0;
+            max-width: 500px;
+        }
+        hr {
+            color: #2E2F2A;
+        }
+        .learn-more {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            color: #274E61;
+            text-decoration: none;
+            padding: 15px 0 15px 0;
+            max-width: 190px;
+        }
+        .learn-more:hover{
+            text-decoration: underline;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            font-size: 18px;
+            color: #DBF686;
+            background: #2E2F2A;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px grey;
+        }
+        button:hover{
+            background-color: #3D413A;
+            transition: ease-in-out 100ms;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="whole-page">
+    <h1>I love Green Tea 😋</h1>
+    <h2>
+        <em>Especially Matcha Green Tea</em>
+    </h2>
+    
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/022/244/original/matcha-green-tea-732x549-thumbnail-732x549.jpg?1638828257" width="500" px="" alt="Matcha Tea"> 
+    <p class="matcha-description"><strong>Matcha</strong> is finely ground powder of specially grown and processed green tea leaves, traditionally consumed in East Asia. The green tea plants used for matcha are shade-grown for three to four weeks before harvest; the stems and veins are removed during processing. During shaded growth, the plant Camellia sinensis produces more theanine and caffeine. The powdered form of matcha is consumed differently from tea leaves or tea bags, as it is suspended in a liquid, typically water or milk.</p>
+    <hr>
+    <a href="https://en.wikipedia.org/wiki/Matcha" class="learn-more">Learn more on wikipedia</a>
+    <button>
+        👉 Order Matcha Tea
+    </button>
+    <p class="footer">
+        <br>
+        This page was built by 
+        <strong>Lily Elayoubi</strong>
+    </p>
+    </div>
+    <script>
+        function buyMatcha(){
+            let name = prompt("What is your name?");
+            let email =prompt("What is your email address?");
+            let emoji = prompt("What is your favourite emoji? 😀");
+
+            if (name.length>0 && email.length>0){
+                alert("Thanks " + name + "! We will keep in touch through email. Enjoy lots of teas. " +emoji);
+            } else {
+                alert("Invalid name/email!")
+            }
+        }
+        let buyButton = document.querySelector("button");
+        buyButton.addEventListener("click",buyMatcha);
+    </script>
+</body>
+</html>
